@@ -23,11 +23,11 @@ orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
 
-skier_asset = ImageAsset("Python Skiier.png", Frame(20,20,600,600))
-skier = Sprite(skier_asset, (10, 10))
+skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
+skier = Sprite(skier_asset, (0, 0))
 
+skier.scale = 0.2
 """
-skier.scale = 0.1
 skier.direction = 1
 skier.go = True
 """
