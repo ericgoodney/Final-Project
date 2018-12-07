@@ -7,6 +7,7 @@ Fork this repository to begin working on your final project. Then do the followi
 """
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
+from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 from ggame import CircleAsset, LineStyle, Color, Sprite, App, RectangleAsset
 from math import sin,cos, tan, acos, asin, atan
 from math import exp, expm1, e, pi
@@ -24,8 +25,7 @@ thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
 
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
-skier = Sprite(skier_asset, (0, 0))
-
+skier = Sprite(skier_asset, (-30, 75))
 skier.scale = 0.2
 """
 skier.direction = 1
@@ -39,8 +39,17 @@ for z in range(-15, 6):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 
-      
-        
+rectangle1  = RectangleAsset(30, 700, thinline, black)
+
+Sprite(rectangle1, (40,170))
+
+
+rectangle2  = RectangleAsset(12,400, thinline, black)
+
+Sprite(rectangle2, (455,390))
+
+
+
         
 myapp = App()
 myapp.run()
