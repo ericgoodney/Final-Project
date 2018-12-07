@@ -1,4 +1,4 @@
-# Final Project
+# Ski Jumper
 
 Fork this repository to begin working on your final project. Then do the following:
 
