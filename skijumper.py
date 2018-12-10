@@ -5,6 +5,15 @@ Fork this repository to begin working on your final project. Then do the followi
 * Add your python sources.
 * When the project is finished, make  pull request to let me know you're finished.
 """
+#g=9.81m/s^2
+#a=g*sinangle
+#h(x) = ax^2 + bx + c 
+#h'(x) = 2ax +b
+#def height(x):
+    slope(x): 
+    
+
+
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
