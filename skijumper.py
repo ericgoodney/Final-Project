@@ -22,16 +22,15 @@ white = Color(0xF8F8FF, 1.0)
 black = Color(0x000000, 1.0)
 orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
-thinline = LineStyle(1, blue)
+thinline = LineStyle(1, black)
 
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
-skier = Sprite(skier_asset, (-30, 75))
+skier = Sprite(skier_asset, (-30, 70))
 skier.scale = 0.2
 """
 skier.direction = 1
 skier.go = True
 """
-
 for z in range(-15, 6):
     Ypoints = (-1*(z**2))+400
     Xpoints = 20*(z+(150/8))
@@ -39,17 +38,18 @@ for z in range(-15, 6):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 
-rectangle1  = RectangleAsset(30, 700, thinline, black)
+rectangle1 = RectangleAsset(12, 700, thinline, black)
 
-Sprite(rectangle1, (40,170))
-
+Sprite(rectangle1, (63,175))
 
 rectangle2  = RectangleAsset(12,400, thinline, black)
 
-Sprite(rectangle2, (455,390))
+Sprite(rectangle2, (474,384))
 
 
 
-        
+
+
+
 myapp = App()
 myapp.run()
