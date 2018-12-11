@@ -10,7 +10,7 @@ Fork this repository to begin working on your final project. Then do the followi
 #h(x) = ax^2 + bx + c 
 #h'(x) = 2ax +b
 #def height(x):
-    slope(x): 
+    #slope(x): 
     
 
 
