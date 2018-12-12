@@ -17,7 +17,6 @@ black = Color(0x000000, 1.0)
 orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, black)
-
 """
 print('Enter the folowing values of the domain and function y = ax^2 + bx + c of your ski jump: ')
 x1 =input('left domain = ')
@@ -39,6 +38,31 @@ print(yfunc(3))
 
 dyfunc = lambda x: 2*af*x + bf 
 print(dyfunc(3))
+
+grav = 9.81
+
+#finding angle at given point x
+
+(x),yfunc(x)
+
+for i in range (dyfunct(x1f,x2f+1)):
+    sort.lambda(x1)
+#get lowest y value
+
+for j in range (x1f, x2f+1):
+    sort(x1,x2)
+h = yfunc(x)-lowest value #the heights
+
+b = x-#x value of the lowes y corrdinate
+
+acce = g*(b/
+
+    
+    
+
+
+
+
 
 
 """
