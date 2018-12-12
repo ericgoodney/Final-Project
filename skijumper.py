@@ -55,13 +55,7 @@ h = yfunc(x)-lowest value #the heights
 
 b = x-#x value of the lowes y corrdinate
 
-acce = g*(b/
-
-    
-    
-
-
-
+acce = g*(b/h)
 
 
 
