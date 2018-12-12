@@ -19,26 +19,26 @@ thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, black)
 
 """
-
-
-
 print('Enter the folowing values of the domain and function y = ax^2 + bx + c of your ski jump: ')
-x1 =str(float(input('left domain = ')))
-x2 =str(float(input('right domain = ')))
-a = str(float(input('a = ')))
-b = str(float(input('b = ')))
-c = str(float(input('c = ')))
+x1 =input('left domain = ')
+x2 =input('right domain = ')
+a = input('a = ')
+b = input('b = ')
+c = input('c = ')
 
 print(a+'x**2 + '+b+'x + '+c)
 
-#fx = ((a)*(x**2)) + (b*x) + c
+x1f = float(x1)
+x2f = float(x2)
+af = float(a)
+bf = float(b)
+cf = float(c)
 
-for i in range(7):
-    print(str(eval(((a)*(x**2)) + (b*x) + c)))
+yfunc = lambda x: af*x**2 + bf*x + cf
+print(yfunc(3))
 
-
-
-
+dyfunc = lambda x: 2*af*x + bf 
+print(dyfunc(3))
 
 
 """
@@ -58,4 +58,4 @@ c
 """
     
 #myapp = skijump()
-myapp.run()
+#myapp.run()
