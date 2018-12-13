@@ -25,7 +25,9 @@ thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
 
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
-skier = Sprite(skier_asset, (-30, 75))
+skier = Sprite(skier_asset, (0, 0))
+skier.fxcenter=0
+skier.fycenter=0
 skier.scale = 0.2
 """
 skier.direction = 1
