@@ -1,4 +1,10 @@
 """
+Fork this repository to begin working on your final project. Then do the following:
+* Edit the file called "functional.md" to describe the **functionality** of your project.
+* Edit the file called "design.md" to describe the **design** of your project.
+* Add your python sources.
+* When the project is finished, make  pull request to let me know you're finished.
+"""
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
@@ -16,64 +22,34 @@ white = Color(0xF8F8FF, 1.0)
 black = Color(0x000000, 1.0)
 orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
-thinline = LineStyle(1, black)
+thinline = LineStyle(1, blue)
+
+skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
+skier = Sprite(skier_asset, (-30, 75))
+skier.scale = 0.2
 """
-print('Enter the folowing values of the domain and function y = ax^2 + bx + c of your ski jump: ')
-x1 =input('left domain = ')
-x2 =input('right domain = ')
-a = input('a = ')
-b = input('b = ')
-c = input('c = ')
-
-print(a+'x**2 + '+b+'x + '+c)
-
-x1f = float(x1)
-x2f = float(x2)
-af = float(a)
-bf = float(b)
-cf = float(c)
-
-yfunc = lambda x: af*x**2 + bf*x + cf
-print(yfunc(3))
-
-dyfunc = lambda x: 2*af*x + bf 
-print(dyfunc(3))
-
-grav = 9.81
-
-#finding angle at given point x
-
-(x),yfunc(x)
-
-for i in range (dyfunct(x1f,x2f+1)):
-    sort.lambda(x1)
-#get lowest y value
-
-for j in range (x1f, x2f+1):
-    sort(x1,x2)
-h = yfunc(x)-lowest value #the heights
-
-b = x-#x value of the lowes y corrdinate
-
-acce = g*(b/h)
-
-
-
+skier.direction = 1
+skier.go = True
 """
-#g=9.81m/s^2
-#a=g*sinangle
-#h(x) = ax^2 + bx + c 
-#h'(x) = 2ax +b
-#def height(x):
-    #slope(x): 
-y=ax^2+bx+x
-y=2ax+ b
-x min
-x max
-a
-b
-c
-"""
-    
-#myapp = skijump()
-#myapp.run()
+
+for z in range(-15, 6):
+    Ypoints = (-1*(z**2))+400
+    Xpoints = 20*(z+(150/8))
+    point = CircleAsset(4, thinline, black)
+    Sprite(point, (Xpoints, Ypoints))
+print(' ')
+
+rectangle1  = RectangleAsset(30, 700, thinline, black)
+
+Sprite(rectangle1, (40,170))
+
+
+rectangle2  = RectangleAsset(12,400, thinline, black)
+
+Sprite(rectangle2, (455,390))
+
+
+
+        
+myapp = App()
+myapp.run()
