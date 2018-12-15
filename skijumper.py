@@ -25,14 +25,11 @@ thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
 
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
-skier = Sprite(skier_asset, (0, 0))
-skier.fxcenter=0
-skier.fycenter=0
+skier = Sprite(skier_asset, (50, 160))
+skier.fxcenter=.5
+skier.fycenter=.7
 skier.scale = 0.2
-"""
-skier.direction = 1
-skier.go = True
-"""
+skier.rotation = .3
 
 for z in range(-15, 6):
     Ypoints = (-1*(z**2))+400
@@ -41,17 +38,29 @@ for z in range(-15, 6):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 
+def  xfubcz ;
+return 
+
+xfunc = lambda z ;
+
 rectangle1  = RectangleAsset(30, 700, thinline, black)
-
 Sprite(rectangle1, (40,170))
-
-
 rectangle2  = RectangleAsset(12,400, thinline, black)
-
 Sprite(rectangle2, (455,390))
 
+if Xpoints in range(-15,1):
+    skier.rotation == z*-0.3
+            
+if Xpoints in range(0,1):
+    skier.rotation == .3
+            
+elif Xpoints in range(1,6):
+            skier.rotation == .3*z
 
+def step ():
+       
 
+    
         
 myapp = App()
-myapp.run()
+myapp.run(step)
