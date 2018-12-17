@@ -52,25 +52,25 @@ if Xpoints in range(0,1):
 elif Xpoints in range(1,6):
             skier.rotation == .3*z
 """  
-#Goal: Find all x points by small parts, find the slope of that point for tilt, inverse tan of the angle, speed?
-for z in range (-150, 60):
+#Goal: Find all x points by .1, find the slope of that point for tilt, inverse tan of the angle, speed?
+xfunc = lambda z: 20*(z+(150/8))
     
-xfunc(z)
-yfunc(z)
+yfunc = lambda z: (-1*(z**2))+400
+  
+    
+xlist = [xfunc(d/10) for d in range(-150, 60)]
+ylist = [yfunc(d/10) for d in range(-150, 60)]
+print(xlist)
+print(ylist)
+
 #slope? #derivative? how do you find it of a parametric?
 
-def  xfunc(z);
-return
-    
-xfunc = lambda z:
-    
-
-STOP();
-skier.x=xfunc(z)
-skier.y=yfunc(z)
-skier.rotation = #derivative? how do you find it of a parametric?
-
+zindex  = 0
 def step ():
-       
+    global zindex
+    if zindex < len(xlist):
+        skier.position = (xlist[zindex], ylist[zindex])
+        zindex += 1
+
 myapp = App()
 myapp.run(step)
