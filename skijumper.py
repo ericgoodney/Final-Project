@@ -54,6 +54,7 @@ elif Xpoints in range(1,6):
 """  
 #inverse tan of (slope) equals the anlge in radias which should be adjusted to the origional angle
 #inverse tan of the derivative gets to the angle 
+#Find anti derivative 
 xfunc = lambda z: 20*(z+(150/8))
     
 yfunc = lambda z: (-1*(z**2))+400
