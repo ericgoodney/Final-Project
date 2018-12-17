@@ -62,10 +62,9 @@ yfunc = lambda z: (-1*(z**2))+400
     
 xlist = [xfunc(d/10) for d in range(-150, 60)]
 ylist = [yfunc(d/10) for d in range(-150, 60)]
-print(xlist)
-print(ylist)
+#print(xlist)
+#print(ylist)
 
-#slope? #derivative? how do you find it of a parametric?
 
 zindex  = 0
 def step ():
