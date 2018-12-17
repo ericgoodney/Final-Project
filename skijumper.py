@@ -38,16 +38,11 @@ for z in range(-15, 6):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 
-def  xfubcz ;
-return 
-
-xfunc = lambda z ;
-
 rectangle1  = RectangleAsset(30, 700, thinline, black)
 Sprite(rectangle1, (40,170))
 rectangle2  = RectangleAsset(12,400, thinline, black)
 Sprite(rectangle2, (455,390))
-
+"""
 if Xpoints in range(-15,1):
     skier.rotation == z*-0.3
             
@@ -56,11 +51,26 @@ if Xpoints in range(0,1):
             
 elif Xpoints in range(1,6):
             skier.rotation == .3*z
+"""  
+#Goal: Find all x points by small parts, find the slope of that point for tilt, inverse tan of the angle, speed?
+for z in range (-150, 60):
+    
+xfunc(z)
+yfunc(z)
+#slope? #derivative? how do you find it of a parametric?
+
+def  xfunc(z);
+return
+    
+xfunc = lambda z:
+    
+
+STOP();
+skier.x=xfunc(z)
+skier.y=yfunc(z)
+skier.rotation = #derivative? how do you find it of a parametric?
 
 def step ():
        
-
-    
-        
 myapp = App()
 myapp.run(step)
