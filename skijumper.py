@@ -52,7 +52,8 @@ if Xpoints in range(0,1):
 elif Xpoints in range(1,6):
             skier.rotation == .3*z
 """  
-#Goal: Find all x points by .1, find the slope of that point for tilt, inverse tan of the angle, speed?
+#inverse tan of (slope) equals the anlge in radias which should be adjusted to the origional angle
+#inverse tan of the derivative gets to the angle 
 xfunc = lambda z: 20*(z+(150/8))
     
 yfunc = lambda z: (-1*(z**2))+400
