@@ -59,11 +59,7 @@ elif Xpoints in range(1,6):
 
 deriv = (-z/10)
 
-for z in range(-150,60):
-    skier.rotation == atan(-z/10)#radians?
 
-
-for z in range (-150,60):
     
 #atan(-z/10)
     
@@ -75,6 +71,7 @@ yfunc = lambda z: (-1*(z**2))+400
     
 xlist = [xfunc(d/10) for d in range(-150, 60)]
 ylist = [yfunc(d/10) for d in range(-150, 60)]
+zlist = [d/10 for d in range(-150, 60)]
 #print(xlist)
 #print(ylist)
 
@@ -84,9 +81,7 @@ def step ():
     global zindex
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
-        zindex += 1
-    for z in range(-150,60):
-        skier.rotation == atan(-z/10)
+        skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
 
 myapp = App()
