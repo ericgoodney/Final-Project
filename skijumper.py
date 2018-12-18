@@ -60,7 +60,7 @@ elif Xpoints in range(1,6):
 deriv = (-z/10)
 
 for z in range(-150,60):
-    skier.rotation == (-z/10)
+    skier.rotation == atan(-z/10)#radians?
 
 
 for z in range (-150,60):
