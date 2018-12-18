@@ -54,10 +54,19 @@ elif Xpoints in range(1,6):
 """  
 #inverse tan of (slope) equals the anlge in radias which should be adjusted to the origional angle
 #inverse tan of the derivative gets to the angle 
-#Find anti derivative 
+#Find inverse tan of derivative 
+
 
 deriv = (-z/10)
 
+for z in range(-150,60):
+    skier.rotation == (-z/10)
+
+
+for z in range (-150,60):
+    
+#atan(-z/10)
+    
 
 xfunc = lambda z: 20*(z+(150/8))
     
@@ -75,6 +84,9 @@ def step ():
     global zindex
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
+        zindex += 1
+    for z in range(-150,60):
+        skier.rotation == atan(-z/10)
         zindex += 1
 
 myapp = App()
