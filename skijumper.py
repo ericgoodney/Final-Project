@@ -69,9 +69,9 @@ xfunc = lambda z: 20*(z+(150/8))
 yfunc = lambda z: (-1*(z**2))+400
   
     
-xlist = [xfunc(d/10) for d in range(-150, 60)]
-ylist = [yfunc(d/10) for d in range(-150, 60)]
-zlist = [d/10 for d in range(-150, 60)]
+xlist = [xfunc(d/10) for d in range(-150, 300)]
+ylist = [yfunc(d/10) for d in range(-150, 300)]
+zlist = [d/10 for d in range(-150, 300)]
 #print(xlist)
 #print(ylist)
 
