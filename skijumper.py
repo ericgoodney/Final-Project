@@ -69,9 +69,9 @@ xfunc = lambda z: 20*(z+(150/8))
 yfunc = lambda z: (-1*(z**2))+400
   
     
-xlist = [xfunc(d/10) for d in range(-150, 300)]
-ylist = [yfunc(d/10) for d in range(-150, 300)]
-zlist = [d/10 for d in range(-150, 300)]
+xlist = [xfunc(d/10) for d in range(-150, 100)]
+ylist = [yfunc(d/10) for d in range(-150, 100)]
+zlist = [d/10 for d in range(-150, 100)]
 #print(xlist)
 #print(ylist)
 
@@ -82,7 +82,7 @@ def step ():
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
         skier.rotation = atan(zlist[zindex]/10) + .37
-        zindex += 1
+        zindex += .5
 
 myapp = App()
 myapp.run(step)
