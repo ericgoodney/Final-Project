@@ -5,6 +5,7 @@ Fork this repository to begin working on your final project. Then do the followi
 * Add your python sources.
 * When the project is finished, make  pull request to let me know you're finished.
 """
+
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
@@ -42,39 +43,16 @@ rectangle1  = RectangleAsset(30, 700, thinline, black)
 Sprite(rectangle1, (40,170))
 rectangle2  = RectangleAsset(12,400, thinline, black)
 Sprite(rectangle2, (455,390))
-"""
-if Xpoints in range(-15,1):
-    skier.rotation == z*-0.3
-            
-if Xpoints in range(0,1):
-    skier.rotation == .3
-            
-elif Xpoints in range(1,6):
-            skier.rotation == .3*z
-"""  
-#inverse tan of (slope) equals the anlge in radias which should be adjusted to the origional angle
-#inverse tan of the derivative gets to the angle 
-#Find inverse tan of derivative 
-
 
 deriv = (-z/10)
-
-
-    
-#atan(-z/10)
-    
 
 xfunc = lambda z: 20*(z+(150/8))
     
 yfunc = lambda z: (-1*(z**2))+400
   
-    
 xlist = [xfunc(d/10) for d in range(-150, 100)]
 ylist = [yfunc(d/10) for d in range(-150, 100)]
 zlist = [d/10 for d in range(-150, 100)]
-#print(xlist)
-#print(ylist)
-
 
 zindex  = 0
 def step ():
@@ -82,7 +60,72 @@ def step ():
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
         skier.rotation = atan(zlist[zindex]/10) + .37
-        zindex += 1
+        zindex += .3
 
 myapp = App()
 myapp.run(step)
+"""
+
+from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
+from ggame import LineStyle, Color, Sprite, Sound
+from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
+from ggame import CircleAsset, LineStyle, Color, Sprite, App, RectangleAsset
+from math import sin,cos, tan, acos, asin, atan
+from math import exp, expm1, e, pi
+from math import log, log10, sqrt, log2
+
+myapp = App()
+
+red = Color(0xFF4040, 1.0)
+green = Color(0x00FF00, 1.0)
+blue = Color(0x1C86EE, 1.0)
+white = Color(0xF8F8FF, 1.0)
+black = Color(0x000000, 1.0)
+orange = Color(0xFF7D40, 1.0)
+thinline1 = LineStyle(1, black)
+thinline = LineStyle(1, blue)
+
+a = int(input('enter the a value of a parabola in the form y=ax^2 + b: '))
+b = int(input('enter the b value of a parabola in the form y=ax^2 + b: '))
+
+skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
+skier = Sprite(skier_asset, (50, 160))
+skier.fxcenter=.5
+skier.fycenter=.7
+skier.scale = 0.2
+skier.rotation = .3
+
+for t in range(-50, 50):
+    Ypoints = (a*(t**2) + b)
+    Xpoints = t
+    point = CircleAsset(4, thinline, black)
+    Sprite(point, (Xpoints, Ypoints))
+print(' ')
+
+rectangle1  = RectangleAsset(30, 700, thinline, black)
+Sprite(rectangle1, (40,170))
+rectangle2  = RectangleAsset(12,400, thinline, black)
+Sprite(rectangle2, (455,390))
+
+for t in range(-100,100):
+    deriv = 2*a*t
+
+xfunc = lambda t: t
+    
+yfunc = lambda t:a*(t**2) + b
+  
+xlist = [xfunc(t/10) for t in range(-100, 100)]
+ylist = [yfunc(t/10) for t in range(-100, 100)]
+zlist = [t/10 for t in range(-100, 100)]
+
+zindex  = 0
+def step ():
+    global tindex
+    if tindex < len(xlist):
+        skier.position = (xlist[tindex], ylist[tindex])
+        skier.rotation = atan(tlist[tindex]/10) + .37
+        tindex += 1
+
+myapp = App()
+myapp.run(step)
+"""
