@@ -82,7 +82,7 @@ def step ():
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
         skier.rotation = atan(zlist[zindex]/10) + .37
-        zindex += .5
+        zindex += 1
 
 myapp = App()
 myapp.run(step)
