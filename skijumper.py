@@ -108,10 +108,10 @@ for t in range(-50, 50):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 
-rectangle1  = RectangleAsset(30, 700, thinline, black)
-Sprite(rectangle1, (40,170))
-rectangle2  = RectangleAsset(12,400, thinline, black)
-Sprite(rectangle2, (455,390))
+#rectangle1  = RectangleAsset(30, 700, thinline, black)
+#Sprite(rectangle1, (40,170))
+#rectangle2  = RectangleAsset(12,400, thinline, black)
+#Sprite(rectangle2, (455,390))
 
 for t in range(-100,100):
     deriv = 2*(t-h)
