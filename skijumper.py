@@ -4,7 +4,7 @@ Fork this repository to begin working on your final project. Then do the followi
 * Edit the file called "design.md" to describe the **design** of your project.
 * Add your python sources.
 * When the project is finished, make  pull request to let me know you're finished.
-"""
+
 
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
 from ggame import LineStyle, Color, Sprite, Sound
@@ -85,8 +85,8 @@ orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
 
-a = int(input('enter the a value of a parabola in the form y=ax^2 + b: '))
-b = int(input('enter the b value of a parabola in the form y=ax^2 + b: '))
+h = int(input('enter the h value of a parabola in the form y=(x-h)^2+k: '))
+k = int(input('enter the k value of a parabola in the form y=(x-h)^2+k: '))
 
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
 skier = Sprite(skier_asset, (50, 160))
@@ -95,9 +95,15 @@ skier.fycenter=.7
 skier.scale = 0.2
 skier.rotation = .3
 
+
+xfunc = lambda t: t+400
+    
+yfunc = lambda t:-((t-h)**2)+k + 400
+
+
 for t in range(-50, 50):
-    Ypoints = (a*(t**2) + b)
-    Xpoints = t
+    Ypoints = yfunc(t)
+    Xpoints = xfunc(t)
     point = CircleAsset(4, thinline, black)
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
@@ -108,24 +114,20 @@ rectangle2  = RectangleAsset(12,400, thinline, black)
 Sprite(rectangle2, (455,390))
 
 for t in range(-100,100):
-    deriv = 2*a*t
+    deriv = 2*(t-h)
 
-xfunc = lambda t: t
-    
-yfunc = lambda t:a*(t**2) + b
   
-xlist = [xfunc(t/10) for t in range(-100, 100)]
-ylist = [yfunc(t/10) for t in range(-100, 100)]
-zlist = [t/10 for t in range(-100, 100)]
-
+xlist = [xfunc(t/10) for t in range(-500, 500)]
+ylist = [yfunc(t/10) for t in range(-500, 500)]
+zlist = [t/10 for t in range(-500, 500)]
 zindex  = 0
+
 def step ():
-    global tindex
-    if tindex < len(xlist):
-        skier.position = (xlist[tindex], ylist[tindex])
-        skier.rotation = atan(tlist[tindex]/10) + .37
-        tindex += 1
+    global zindex
+    if zindex < len(xlist):
+        skier.position = (xlist[zindex], ylist[zindex])
+        skier.rotation = atan(zlist[zindex]/10) + .37
+        zindex += 1
 
 myapp = App()
 myapp.run(step)
-"""
