@@ -96,7 +96,7 @@ skier.scale = 0.2
 skier.rotation = .3
 
 
-xfunc = lambda t: t+400
+xfunc = lambda t: 10*t+400
     
 yfunc = lambda t:-((t-h)**2)+k + 400
 
