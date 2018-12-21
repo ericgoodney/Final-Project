@@ -66,7 +66,7 @@ myapp = App()
 myapp.run(step)
 """
 
-from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset
+from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset, TextAsset
 from ggame import LineStyle, Color, Sprite, Sound
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
 from ggame import CircleAsset, LineStyle, Color, Sprite, App, RectangleAsset
@@ -101,7 +101,7 @@ xfunc = lambda t: 20*t+480
 yfunc = lambda t:-((t-h)**2)+k + 340
 
 
-for t in range(-10, 10):
+for t in range(-30, 30):
     Ypoints = yfunc(t)
     Xpoints = xfunc(t)
     point = CircleAsset(4, thinline, black)
@@ -128,6 +128,10 @@ def step ():
         skier.position = (xlist[zindex], ylist[zindex])
         skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
+        
+        
+sendit = TextAsset("Sending Papi Into The Weekend", style="bold 40pt Arial", width=250)
+Sprite(sendit, (100, 100))
 
 myapp = App()
 myapp.run(step)
