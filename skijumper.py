@@ -101,7 +101,7 @@ xfunc = lambda t: 20*t+480
 yfunc = lambda t:-((t-h)**2)+k + 340
 
 
-for t in range(-50, 50):
+for t in range(-10, 10):
     Ypoints = yfunc(t)
     Xpoints = xfunc(t)
     point = CircleAsset(4, thinline, black)
