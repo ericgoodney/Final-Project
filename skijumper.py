@@ -98,7 +98,7 @@ skier.rotation = .3
 
 xfunc = lambda t: 20*t+480
     
-yfunc = lambda t:-((t-h)**2)+k + 380
+yfunc = lambda t:-((t-h)**2)+k + 340
 
 
 for t in range(-50, 50):
