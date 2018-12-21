@@ -130,7 +130,7 @@ def step ():
         zindex += 1
         
         
-sendit = TextAsset("Sending Papi Into The Weekend", style="bold 40pt Arial", width=250)
+sendit = TextAsset("Send It Fuck Yeah!", style="bold 40pt Arial", width=250)
 Sprite(sendit, (100, 100))
 
 myapp = App()
