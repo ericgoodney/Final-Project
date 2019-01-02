@@ -17,20 +17,19 @@ black = Color(0x000000, 1.0)
 orange = Color(0xFF7D40, 1.0)
 thinline1 = LineStyle(1, black)
 thinline = LineStyle(1, blue)
-
+#values chosen by the user
 h = int(input('enter the h value of a parabola in the form y=(x-h)^2+k: '))
 k = int(input('enter the k value of a parabola in the form y=(x-h)^2+k: '))
-
+#this is the image used to represent the skier
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
 skier = Sprite(skier_asset, (50, 160))
 skier.fxcenter=.5
 skier.fycenter=.7
 skier.scale = 0.2
 skier.rotation = .3
-
-
+#here is the parametric used to later find the derivtive for the tilt, and here it is also centering the grid
 xfunc = lambda t: 20*t+480
-    
+
 yfunc = lambda t:-((t-h)**2)+k + 340
 
 
