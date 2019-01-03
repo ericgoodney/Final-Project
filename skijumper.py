@@ -1,4 +1,3 @@
-
 from ggame import App, RectangleAsset, ImageAsset, Frame, SoundAsset, TextAsset
 from ggame import LineStyle, Color, Sprite, Sound
 from ggame import App, Color, LineStyle, Sprite, RectangleAsset, CircleAsset, EllipseAsset, PolygonAsset
@@ -28,40 +27,26 @@ skier.fycenter=.7
 skier.scale = 0.2
 skier.rotation = .3
 #here is the parametric used to later find the derivtive for the tilt, and here it is also centering the grid
-xfunc = lambda t: 20*t+480
-
+xfunc = lambda t: 8*t+480
 yfunc = lambda t:-((t-h)**2)+k + 340
-
-
 for t in range(-30, 30):
     Ypoints = yfunc(t)
     Xpoints = xfunc(t)
     point = CircleAsset(4, thinline, black)
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
-
-#rectangle1  = RectangleAsset(30, 700, thinline, black)
-#Sprite(rectangle1, (40,170))
-#rectangle2  = RectangleAsset(12,400, thinline, black)
-#Sprite(rectangle2, (455,390))
-
 for t in range(-100,100):
     deriv = 2*(t-h)
-
-  
 xlist = [xfunc(t/10) for t in range(-500, 500)]
 ylist = [yfunc(t/10) for t in range(-500, 500)]
 zlist = [t/10 for t in range(-500, 500)]
 zindex  = 0
-
 def step ():
     global zindex
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
         skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
-        
-        
 sendit = TextAsset("Send It!", style="bold 40pt Arial", width=250)
 Sprite(sendit, (100, 100))
 
