@@ -22,12 +22,12 @@ k = int(input('enter the k value of a parabola in the form y=(x-h)^2+k: '))
 #this is the image used to represent the skier
 skier_asset = ImageAsset("images/Python Skiier.png", Frame(0,0,685,685))
 skier = Sprite(skier_asset, (50, 160))
-skier.fxcenter=.5
+skier.fxcenter=.6
 skier.fycenter=.7
-skier.scale = 0.2
+skier.scale = 0.3
 skier.rotation = .3
 #Here I was able to center the vertex of the parabola
-xfunc = lambda t: 20*t+480
+xfunc = lambda t: 20*t+522
 yfunc = lambda t:-((t-h)**2)+k + 600
 #Here I made the jump 60 units in length as this scale was appropriate for the python grid
 for t in range(-30, 30):
