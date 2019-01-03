@@ -38,11 +38,11 @@ for t in range(-30, 30):
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 #What is going on here?
-for t in range(-1,0):
-    deriv = 2*(t-h)
+#for t in range(-10000,56):
+#    deriv = 2*(t-h)
 xlist = [xfunc(t/10) for t in range(-500, 500)]
 ylist = [yfunc(t/10) for t in range(-500, 500)]
-zlist = [t/10 for t in range(-500, 500)]
+zlist = [t/10 - h for t in range(-500, 500)]
 zindex  = 0
 def step ():
     global zindex
@@ -51,7 +51,7 @@ def step ():
         skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
 sendit = TextAsset("Send It!", style="bold 40pt Arial", width=250)
-Sprite(sendit, (40, 500))
+Sprite(sendit, (400, 25))
 
 myapp = App()
 myapp.run(step)
