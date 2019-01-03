@@ -28,7 +28,7 @@ skier.scale = 0.3
 skier.rotation = .3
 #Here I was able to center the vertex of the parabola
 xfunc = lambda t: 20*t+522
-yfunc = lambda t:-((t-h)**2)+k + 600
+yfunc = lambda t:-((t-h)**2)-k + 600
 #Here I made the jump 60 units in length as this scale was appropriate for the python grid
 for t in range(-30, 30):
     Ypoints = yfunc(t)
