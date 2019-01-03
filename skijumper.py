@@ -28,6 +28,7 @@ skier.scale = 0.3
 skier.rotation = .3
 #Here I was able to center the vertex of the parabola
 xfunc = lambda t: 20*t+522
+#Here I used -k vs +k to account for python moving down with regard to y values. 
 yfunc = lambda t:-((t-h)**2)-k + 600
 #Here I made the jump 60 units in length as this scale was appropriate for the python grid
 for t in range(-30, 30):
@@ -44,10 +45,13 @@ xlist = [xfunc(t/10) for t in range(-500, 500)]
 ylist = [yfunc(t/10) for t in range(-500, 500)]
 zlist = [t/10 - h for t in range(-500, 500)]
 zindex  = 0
+#Here the step function has the midpoint of the bottom of the skier ride along the points of the parabola
+#The rotation is also changed based on the derivative found using calculus for above
 def step ():
     global zindex
     if zindex < len(xlist):
         skier.position = (xlist[zindex], ylist[zindex])
+        #The .37 is the initial tilt the skier needs to become perpendicular to the flat ground, as the origional was titled
         skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
 sendit = TextAsset("Send It!", style="bold 40pt Arial", width=250)
