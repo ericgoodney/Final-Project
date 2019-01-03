@@ -27,12 +27,14 @@ skier.fycenter=.7
 skier.scale = 0.2
 skier.rotation = .3
 #here is the parametric used to later find the derivtive for the tilt, and here it is also centering the grid
-xfunc = lambda t: 8*t+480
-yfunc = lambda t:-((t-h)**2)+k + 340
+
+xfunc = lambda t: 20*t+480
+yfunc = lambda t:-((t-h)**2)+k + 600
+
 for t in range(-30, 30):
     Ypoints = yfunc(t)
     Xpoints = xfunc(t)
-    point = CircleAsset(4, thinline, black)
+    point = CircleAsset(16, thinline, white)
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
 for t in range(-100,100):
@@ -48,7 +50,7 @@ def step ():
         skier.rotation = atan(zlist[zindex]/10) + .37
         zindex += 1
 sendit = TextAsset("Send It!", style="bold 40pt Arial", width=250)
-Sprite(sendit, (100, 100))
+Sprite(sendit, (40, 500))
 
 myapp = App()
 myapp.run(step)
