@@ -26,18 +26,19 @@ skier.fxcenter=.5
 skier.fycenter=.7
 skier.scale = 0.2
 skier.rotation = .3
-#here is the parametric used to later find the derivtive for the tilt, and here it is also centering the grid
-
+#Here I was able to center the vertex of the parabola
 xfunc = lambda t: 20*t+480
 yfunc = lambda t:-((t-h)**2)+k + 600
-
+#Here I made the jump 60 units in length as this scale was appropriate for the python grid
 for t in range(-30, 30):
     Ypoints = yfunc(t)
     Xpoints = xfunc(t)
-    point = CircleAsset(16, thinline, white)
+    #Here the actual circles are plotted which together form a parabola shape simmilar to ski jump
+    point = CircleAsset(8, thinline, white)
     Sprite(point, (Xpoints, Ypoints))
 print(' ')
-for t in range(-100,100):
+#What is going on here?
+for t in range(-1,0):
     deriv = 2*(t-h)
 xlist = [xfunc(t/10) for t in range(-500, 500)]
 ylist = [yfunc(t/10) for t in range(-500, 500)]
