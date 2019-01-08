@@ -54,7 +54,7 @@ def step ():
         #The .37 is the initial tilt the skier needs to become perpendicular to the flat ground, as the origional was titled
         skier.rotation = atan(zlist[zindex]/10) + .37
         #SPEED
-        zindex += 1
+        zindex += 3
 sendit = TextAsset("Send It!", style="bold 40pt Arial", width=250)
 Sprite(sendit, (400, 25))
 
